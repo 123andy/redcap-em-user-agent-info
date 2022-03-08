@@ -76,7 +76,7 @@ class UserAgentInfo extends \ExternalModules\AbstractExternalModule
                         "Please notify the project administrator."
                     );
                 } else {
-                    UserAgentInfo.configs = <?php echo json_encode($configs); ?>;
+                    UserAgentInfo.configs = <?php echo json_encode(array_values($configs)); ?>;
                     UserAgentInfo.isDev = <?php echo json_encode((boolean) $this->getProjectSetting('enable-project-debug-logging')); ?>;
                     $(document).ready(function () {
                         UserAgentInfo.init();
