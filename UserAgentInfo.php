@@ -169,8 +169,8 @@ class UserAgentInfo extends \ExternalModules\AbstractExternalModule
         // Now we have a bunch variables with the same number of repeats.  Lets group them:
 
         $map = [];
-        $count = count($keys[0]);
-        for ($i = 0; $i <= $count; $i++) {
+        $count = count($config[$keys[0]]);
+        for ($i = 0; $i < $count; $i++) {
             $c = [];
             foreach ($keys as $key) {
                 $c[$key] = $config[$key][$i];
