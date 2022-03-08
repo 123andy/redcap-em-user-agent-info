@@ -170,7 +170,7 @@ class UserAgentInfo extends \ExternalModules\AbstractExternalModule
 
         $map = [];
         $count = count($config[$keys[0]]);
-        for ($i = 0; $i <= $count; $i++) {
+        for ($i = 0; $i < $count; $i++) {
             $c = [];
             foreach ($keys as $key) {
                 $c[$key] = $config[$key][$i];
