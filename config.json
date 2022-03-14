@@ -31,11 +31,6 @@
 
   "links": {
     "control-center": [
-      {
-        "name": "API Whitelist",
-        "icon": "gear",
-        "url": "config.php"
-      }
     ],
     "project": [
     ]
