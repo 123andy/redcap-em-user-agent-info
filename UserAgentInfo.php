@@ -22,7 +22,7 @@ class UserAgentInfo extends \ExternalModules\AbstractExternalModule
      *
      */
     function buildOptions() {
-        $options['ip-address']          = isset($_SERVER['HTTP_CLIENT_IP'])?$_SERVER['HTTP_CLIENT_IP']:isset($_SERVER['HTTP_X_FORWARDE‌​D_FOR'])?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR'];
+        $options['ip-address']          = (isset($_SERVER['HTTP_CLIENT_IP'])?$_SERVER['HTTP_CLIENT_IP']):(isset($_SERVER['HTTP_X_FORWARDED_FOR'])?$_SERVER['HTTP_X_FORWARDED_FOR']):($_SERVER['REMOTE_ADDR']);
         $options['remote-addr']         = $_SERVER['REMOTE_ADDR'];
         $options['x-forwarded-for']     = $_SERVER['HTTP_X_FORWARDED_FOR'];
         $options['hostname-from-ip']    = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
